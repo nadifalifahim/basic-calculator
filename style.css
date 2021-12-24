@@ -15,6 +15,9 @@ body {
 
 .container {
   width: 300px;
+  border: 2px solid rgb(204, 204, 204);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .num-container {
@@ -23,12 +26,19 @@ body {
   align-items: flex-end;
   margin: 30px 0;
   background-color: rgb(240, 240, 240);
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
-  box-shadow: 3px 3px 10px 1px #0000002c;
+  transition: 0.3s all ease;
 }
 
-.num-container * {
+.num-container:hover {
+  box-shadow: 1px 3px 5px 0.5px #00000018;
+}
+
+#num-secondary {
+  height: 25px;
+}
+#num-main {
   height: 40px;
 }
 
@@ -40,10 +50,22 @@ body {
 
 .btn-container button {
   height: 50px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
-  box-shadow: 3px 3px 5px 1px #00000018;
-  font-size: 1.04rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all ease;
+  font-weight: 500;
+}
+
+/* .btn-container button:hover {
+  box-shadow: 0px 1px 5px 1px #00000042;
+} */
+
+.btn-container button:hover {
+  filter: brightness(0.95);
 }
 
 .btn-big {
@@ -51,5 +73,5 @@ body {
   background-color: rgb(255, 0, 64);
   color: white;
   font-weight: 700;
-  font-size: 1.3rem !important;
+  font-size: 1.3rem;
 }
